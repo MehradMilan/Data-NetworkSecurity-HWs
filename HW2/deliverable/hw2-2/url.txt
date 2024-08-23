@@ -1,0 +1,3 @@
+URL: https://drive.google.com/file/d/1-Sv0yZZOi4JK0tRXe1bWjJv99buN-Uok/view?usp=sharing
+HASH: a2ac927e6e1aea7cfb5a27aa0e084abd
+FLAG: ce441{l37$_$74r7!}

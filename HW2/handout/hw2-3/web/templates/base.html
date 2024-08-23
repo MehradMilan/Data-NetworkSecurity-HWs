@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/static/img/favicon.ico" />
+    <link rel="stylesheet" href="/static/css/elements.min.css" />
+    <link rel="stylesheet" href="/static/css/layout.css" />
+    <link rel="stylesheet" href="/static/css/about.css" />
+    <title>{% block title %}{% endblock %}</title>
+  </head>
+
+  <body>
+    <main>
+      <header class="header header-light">
+        <div class="header-light-content ml-3">
+          <ul class="nav-header">
+            <li {% if active_page == 'index' %}class="current-menu-item"{% endif %}>
+              <a class="nav-item" href="{{ url_for('main.index') }}">Home</a>
+            </li>
+            <li {% if active_page == 'collection' %}class="current-menu-item"{% endif %}>
+              <a class="nav-item" href="{{ url_for('main.collection') }}">Cyber Collection</a>
+            </li>
+          </ul>
+        </div>
+      </header>
+
+      {% with messages = get_flashed_messages(with_categories=true) %}
+        {% for category, message in messages %}
+        <div class="container">
+            <div class="alert alert-{{ 'info' if category == 'message' else category }}" role="alert">
+            {{ message }}
+            </div>
+        </div>
+        {% endfor %}
+      {% endwith %}
+
+      {% block content %}
+      {% endblock %}
+    </main>
+  </body>
+</html>

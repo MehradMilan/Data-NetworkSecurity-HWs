@@ -1,0 +1,4 @@
+URL: https://drive.google.com/file/d/1CYyVj7vN1HPHpr4wDUUoNkX2GbpmNY9I/view?usp=sharing
+HASH: 2c0c436bacb4fc4be60a34ab0eacd5af
+FLAG 1: CE441{jU$7_G07_p4AsS3D}
+FLAG 2: CE441{0k_c0m3_t0_s4LaB_t0_t4Lk_4b0u7_CTF}

